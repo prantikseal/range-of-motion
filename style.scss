@@ -1,0 +1,216 @@
+@import "abstract/variables";
+@import "abstract/typography";
+@import "abstract/mixins";
+@import "abstract/functions";
+  
+@import url('https://fueler.io/css/fonts/metropolis.css');
+body{
+    font-family: 'Metropolis', sans-serif;
+}
+.underline{
+    text-decoration: underline;
+}
+
+.hero-header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.4rem;
+    text-align: center;
+    letter-spacing: -0.005em;
+    color: #FFFFFF;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    @include respond(tab-port) {
+      font-size: 2rem;
+    }
+  
+    @include respond(phone) {
+      font-size: 2.1rem;
+      transform: translate(-50%, -80%);
+      font-style: normal;
+      font-weight: 700;
+    }
+  
+    @include respond(sm-phone) {
+      font-size: 1.5rem;
+      transform: translate(-50%, -70%);
+      font-style: normal;
+      font-weight: 700;
+    }
+  }
+  
+
+.heading{
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.1rem;
+    color: #0A0433;
+    @include respond(tab-port){
+        font-size: 1.8rem;
+    }
+}
+
+.heading-secondary{
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 700;
+    color: $secondary;
+    @include respond(tab-port){
+        font-size: 1.5rem;
+    }
+
+}
+
+.paragraph{
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #5A5961;
+    @include respond(tab-port){
+        font-size: 1rem;
+    }
+}
+
+.dark-paragraph{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: $dark-color;
+    @include respond(tab-port){
+        font-size: 1rem;
+    }
+}
+
+// campus-ambassador-details
+
+.campus-ambassador-details{
+    ul{
+        padding-left: 1.25rem;
+    }
+    li{
+        margin-bottom: 1.2rem;
+    }
+}
+
+// eligible section
+
+.campus-ambassador-eligible-section-card{
+    background: #E7FCFF;
+    border-radius: 10px;
+    padding: 1.625rem 1.75rem;
+    margin-bottom: 2rem;
+    height: 80%;
+    p{
+        font-family: 'Metropolis';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        color: $dark-para-color;
+    }
+    @include respond(tab-port){
+        height: inherit;
+    }
+}
+
+.sub-paragraph{
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #3E3D47;
+    @include respond(tab-port){
+        font-size: 1rem;
+    }
+}
+
+.sub-paragraph-primary{
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #108594;
+}
+
+.sub-paragraph-hover{
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #FF33D2;
+
+    @include respond(tab-port){
+        font-size: 1rem;
+    }
+}
+
+// invite someone
+
+.gradient-sub-heading{
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.375rem;
+    background: linear-gradient(84.65deg, #443ED9 -6.2%, #F603C7 107.15%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    // text-fill-color: transparent;
+    
+}
+
+.container-fluid-bg{
+    background: linear-gradient(141.39deg, #E3FFFD 17.58%, #FFEDFB 73.17%);
+}
+
+.dashboard-img{
+    border: 0.88px solid #27C6DB;
+    box-shadow: 0px 3.5319929122924805px 51.213897705078125px 0px #06F5FA0F;
+    border-radius: 14.128px;
+}
+
+.note-section {
+    background: #FFFDF2;
+    border: 1px solid #FFC94D;
+    border-radius: 0.625rem;
+    padding: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #B86E00;
+  
+    @include respond(tab-port) {
+      font-size: 18px;
+    }
+  
+    @include respond(phone) {
+      font-size: 1rem;
+      padding: 0.9375rem;
+    }
+  
+  }
+  
+
+// image gallery
+.image-gallery{
+    background: linear-gradient(141.39deg, #E3FFFD 17.58%, #FFEDFB 73.17%);
+}
+
+.campus-ambassador-img-gallery{  
+    img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+
+    .row {
+        margin: 0 auto;
+        padding: 0 10px;
+      }
+  }
+}
+  
