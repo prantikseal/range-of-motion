@@ -3,3 +3,113 @@
 @import "abstract/mixins";
 @import "abstract/functions";
 
+
+*{
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000 !important;
+}
+
+.hero-content{
+    .container{
+        .row{
+            .col-md-6{
+                    h1{
+                        font-family: 'Peckham Press';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 58px;
+                        letter-spacing: 0.02em;
+                    }
+                    p{
+                        font-family: 'Roboto';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 18px;
+                        color: #808080;
+                    }
+            }
+        }
+    }
+}
+
+.feature{
+    .feature-content{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .feature-number{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 34.3009px;
+        line-height: 42px;
+        letter-spacing: 0.02em;
+        display: flex; 
+        align-items: center;
+        .month-text{
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16.3px;
+            line-height: 20px;
+            letter-spacing: 0.02em;
+            margin-top: auto;
+            margin-bottom: 5px;
+        }
+    }
+    .feature-text{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        color: #808080;
+        display: flex; 
+        margin-top: 6px;
+    }
+}
+
+.buy-now-btn{
+    padding: 10px;
+    background: #2BF6FA;
+    padding: 10px 20px;
+    border: none;
+    h4{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22.5px;
+        text-transform: uppercase;
+        color: #000000;
+    }
+    div{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 10px;
+        color: #000000;
+    }
+}
+
+.additional-content{
+    .additional-content-one{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17.5px;
+        color: #FFFFFF;
+    }
+    .additional-content-two{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 20px;
+        color: #35FCFB;
+    }
+}

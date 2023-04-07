@@ -1,85 +1,8 @@
-@import url("https://fueler.io/css/fonts/metropolis.css");
-.text-primary {
-  color: #00fbff;
-}
-
-.text-primary-support {
-  color: #09c9e3;
-}
-
-.text-primary-light {
-  color: #e3fffd;
-}
-
-.text-secondary {
-  color: #eb24bf !important;
-}
-
-.text-secondary-light {
-  color: #ffedfb;
-}
-
-.text-secondary-light {
-  color: #ffedfb;
-}
-
-.text-dark-blue {
-  color: #0d0543;
-}
-
-.text-black {
-  color: #000;
-}
-
-.text-white {
-  color: #fff;
-}
-
-.text-gray-para {
-  color: #8f92a1;
-}
-
-.text-basic {
-  color: #5A5961;
-}
-
-.fw-500 {
-  font-weight: 500 !important;
-}
-
-.dark-paragraph-color {
-  color: #3E3D47;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @font-face {
-  font-family: metropolis;
-  font-style: normal;
-  font-weight: 500;
-  src: local("Metropolis"), url(/fonts/metropolis/Metropolis-Medium.woff) format("woff");
-}
-@font-face {
-  font-family: metropolis;
-  font-style: normal;
-  font-weight: 600;
-  src: local("Metropolis"), url(/fonts/metropolis/Metropolis-SemiBold.woff) format("woff");
-}
-@font-face {
-  font-family: metropolis;
-  font-style: normal;
-  font-weight: 700;
-  src: local("Metropolis"), url(/fonts/metropolis/Metropolis-Bold.woff) format("woff");
-}
-@font-face {
-  font-family: metropolis;
-  font-style: normal;
-  font-weight: 800;
-  src: local("Metropolis"), url(/fonts/metropolis/Metropolis-ExtraBold.woff) format("woff");
-}
-@font-face {
-  font-family: metropolis;
-  font-style: normal;
-  font-weight: 900;
-  src: local("Metropolis"), url(/fonts/metropolis/Metropolis-Black.woff) format("woff");
+  font-family: "Peckham Press";
+  src: url(/fonts/peckhampress.otf) format("opentype");
 }
 /*
 
@@ -101,213 +24,99 @@ $breakpoint arguement choices :
  ORDER: Base + Typography > genarel layout + grid > page layout > components
 
 */
+* {
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Metropolis", sans-serif;
+  background-color: #000000 !important;
 }
 
-.underline {
-  text-decoration: underline;
-}
-
-.hero-header {
+.hero-content .container .row .col-md-6 h1 {
+  font-family: "Peckham Press";
   font-style: normal;
-  font-weight: 700;
-  font-size: 3.4rem;
-  text-align: center;
-  letter-spacing: -0.005em;
-  color: #FFFFFF;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-weight: 400;
+  font-size: 58px;
+  letter-spacing: 0.02em;
 }
-@media only screen and (max-width: 900px) {
-  .hero-header {
-    font-size: 2rem;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .hero-header {
-    font-size: 2.1rem;
-    transform: translate(-50%, -80%);
-    font-style: normal;
-    font-weight: 700;
-  }
-}
-@media only screen and (max-width: 375px) {
-  .hero-header {
-    font-size: 1.5rem;
-    transform: translate(-50%, -70%);
-    font-style: normal;
-    font-weight: 700;
-  }
-}
-
-.heading {
-  font-family: "Metropolis";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 2.1rem;
-  color: #0A0433;
-}
-@media only screen and (max-width: 900px) {
-  .heading {
-    font-size: 1.8rem;
-  }
-}
-
-.heading-secondary {
-  font-family: "Metropolis";
-  font-style: normal;
-  font-weight: 700;
-  color: #eb24bf;
-}
-@media only screen and (max-width: 900px) {
-  .heading-secondary {
-    font-size: 1.5rem;
-  }
-}
-
-.paragraph {
-  font-family: "Metropolis";
+.hero-content .container .row .col-md-6 p {
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  font-size: 1.2rem;
-  color: #5A5961;
-}
-@media only screen and (max-width: 900px) {
-  .paragraph {
-    font-size: 1rem;
-  }
+  font-size: 18px;
+  color: #808080;
 }
 
-.dark-paragraph {
+.feature .feature-content {
+  display: flex;
+  flex-direction: column;
+}
+.feature .feature-number {
+  font-family: "Inter";
   font-style: normal;
-  font-weight: 500;
-  font-size: 1.125rem;
-  color: #0d0543;
+  font-weight: 900;
+  font-size: 34.3009px;
+  line-height: 42px;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
 }
-@media only screen and (max-width: 900px) {
-  .dark-paragraph {
-    font-size: 1rem;
-  }
+.feature .feature-number .month-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16.3px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  margin-top: auto;
+  margin-bottom: 5px;
 }
-
-.campus-ambassador-details ul {
-  padding-left: 1.25rem;
-}
-.campus-ambassador-details li {
-  margin-bottom: 1.2rem;
-}
-
-.campus-ambassador-eligible-section-card {
-  background: #E7FCFF;
-  border-radius: 10px;
-  padding: 1.625rem 1.75rem;
-  margin-bottom: 2rem;
-  height: 80%;
-}
-.campus-ambassador-eligible-section-card p {
-  font-family: "Metropolis";
+.feature .feature-text {
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 1rem;
-  color: #3E3D47;
-}
-@media only screen and (max-width: 900px) {
-  .campus-ambassador-eligible-section-card {
-    height: inherit;
-  }
+  color: #808080;
+  display: flex;
+  margin-top: 6px;
 }
 
-.sub-paragraph {
-  font-family: "Metropolis";
+.buy-now-btn {
+  padding: 10px;
+  background: #2BF6FA;
+  padding: 10px 20px;
+  border: none;
+}
+.buy-now-btn h4 {
+  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size: 1rem;
-  color: #3E3D47;
+  font-size: 22.5px;
+  text-transform: uppercase;
+  color: #000000;
 }
-@media only screen and (max-width: 900px) {
-  .sub-paragraph {
-    font-size: 1rem;
-  }
-}
-
-.sub-paragraph-primary {
-  font-family: "Metropolis";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1rem;
-  color: #108594;
-}
-
-.sub-paragraph-hover {
-  font-family: "Metropolis";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1rem;
-  color: #FF33D2;
-}
-@media only screen and (max-width: 900px) {
-  .sub-paragraph-hover {
-    font-size: 1rem;
-  }
-}
-
-.gradient-sub-heading {
-  font-family: "Metropolis";
+.buy-now-btn div {
+  font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  font-size: 1.375rem;
-  background: linear-gradient(84.65deg, #443ED9 -6.2%, #F603C7 107.15%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: 10px;
+  color: #000000;
 }
 
-.container-fluid-bg {
-  background: linear-gradient(141.39deg, #E3FFFD 17.58%, #FFEDFB 73.17%);
-}
-
-.dashboard-img {
-  border: 0.88px solid #27C6DB;
-  box-shadow: 0px 3.5319929123px 51.2138977051px 0px rgba(6, 245, 250, 0.0588235294);
-  border-radius: 14.128px;
-}
-
-.note-section {
-  background: #FFFDF2;
-  border: 1px solid #FFC94D;
-  border-radius: 0.625rem;
-  padding: 1.25rem;
+.additional-content .additional-content-one {
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  font-size: 1.25rem;
-  color: #B86E00;
+  font-size: 17.5px;
+  color: #FFFFFF;
 }
-@media only screen and (max-width: 900px) {
-  .note-section {
-    font-size: 18px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .note-section {
-    font-size: 1rem;
-    padding: 0.9375rem;
-  }
-}
-
-.image-gallery {
-  background: linear-gradient(141.39deg, #E3FFFD 17.58%, #FFEDFB 73.17%);
-}
-
-.campus-ambassador-img-gallery img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-  padding: 10px;
-}
-.campus-ambassador-img-gallery img .row {
-  margin: 0 auto;
-  padding: 0 10px;
+.additional-content .additional-content-two {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  color: #35FCFB;
 }/*# sourceMappingURL=style.css.map */
