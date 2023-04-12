@@ -10,46 +10,75 @@
     padding: 0;
     box-sizing: border-box;
 }
+// make image center
+//     <section class="header">
+// <div class="container w-100">
+// <img src="./Public/logo.png" alt="" class="mt-xl-5 mt-lg-5 mt-md-5 mt-sm-5 mt-5">
+// </div>
+// </section>
+
+.header{
+    .container{
+        @include respond(standardphone){
+            text-align: center;
+        }
+    }
+}
+
 
 body{
     background-color: #000000 !important;
 }
 
 .hero-content{
-    .container{
-        .row{
-            .col-md-6{
-                    h1{
-                        font-family: 'Peckham Press';
-                        font-style: normal;
-                        font-weight: 400;
-                        font-size: 58px;
-                        letter-spacing: 0.02em;
-                    }
-                    p{
-                        font-family: 'Roboto';
-                        font-style: normal;
-                        font-weight: 500;
-                        font-size: 18px;
-                        color: #808080;
-                    }
-            }
+    h1{
+        font-family: 'Peckham Press';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3.625rem !important;
+        letter-spacing: 0.02em;
+
+        @include respond(tab-port){
+            font-size: 3.5rem !important;
         }
+    }
+    p{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        color: #808080;
+    }
+
+    @include respond(standardphone){
+        text-align: center;
     }
 }
 
 .feature{
+    display: flex; 
+    align-items: center;
+    .col-md-4{
+        @include respond(standardphone){
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:nth-child(2){
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    }
     .feature-content{
         display: flex;
         flex-direction: column;
-
     }
     .feature-number{
         font-family: 'Inter';
         font-style: normal;
         font-weight: 900;
         font-size: 34.3009px;
-        line-height: 42px;
         letter-spacing: 0.02em;
         display: flex; 
         align-items: center;
@@ -73,13 +102,16 @@ body{
         display: flex; 
         margin-top: 6px;
     }
+    @include respond(tab-port){
+        text-align: center;
+    }
 }
 
 .buy-now-btn{
     padding: 10px;
     background: #2BF6FA;
     padding: 10px 20px;
-    border: none;
+    border: 1px solid #000000;
     h4{
         font-family: 'Inter';
         font-style: normal;
@@ -95,6 +127,17 @@ body{
         font-size: 10px;
         color: #000000;
     }
+    &:hover{
+        background: #000000;
+        border: 1px solid #2BF6FA;
+        h4{
+            color: #2BF6FA;
+        }
+        div{
+            color: #2BF6FA;
+        }
+    }
+    
 }
 
 .additional-content{
@@ -113,3 +156,184 @@ body{
         color: #35FCFB;
     }
 }
+
+.about-massage-gun{
+    h2{
+        text-align: center;
+        font-family: 'Peckham Press';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 6rem;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+        opacity: 0.1;
+        @include respond(tab-port){
+            font-size: 4rem !important;
+        }
+        @include respond(phone){
+            font-size: 3rem !important;
+        }
+    }
+}
+
+.massage-gun-diff-section-content{
+    h3{
+        font-family: 'Peckham Press';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40.2129px;
+        letter-spacing: 0.02em;
+        @include respond(tab-port){
+            font-size: 3rem !important;
+        }
+        @include respond(phone){
+            text-align: center;
+        }
+    }
+    ul{
+        list-style-type: none;
+        li{
+            margin-bottom: 1.125rem;
+            span{
+                padding-left: 1.125rem;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                color: #808080;
+                margin-top: auto;
+                margin-bottom: auto;
+                display: inline;
+                div{
+                    font-size: 14px;
+                    display: inline;
+                    color: #808080;
+                }
+            }
+        }
+    }
+}
+.carousel-content{
+    .carousel-indicators li{
+        border: none;
+        background-color: #FFFFFF;
+    }
+    .carousel-indicators .active{
+        background-color: #2BF6FA;
+        border: none;
+        scale: none;
+    }
+}
+
+.whats-included{
+    .container{
+        padding-top: 100px;
+        padding-bottom: 100px;
+        @include respond(tab-port){
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+
+    h3{
+        font-family: 'Peckham Press';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40.2129px;
+        letter-spacing: 0.02em;
+        @include respond(tab-port){
+            font-size: 3rem !important;
+        }
+        @include respond(phone){
+            text-align: center;
+        }
+    }
+
+    ul{
+        padding-left: 1.5rem;
+        li{
+            margin-bottom: 1.125rem;
+            padding-left: 1.125rem;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            color: #808080;
+            margin-top: auto;
+            }
+    }
+}
+
+footer{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #AEAEAE;
+    text-align: center;
+}
+
+//     <section class="product-video">
+// <div class="video-container">
+// <img src="./Public/play-btn.png" alt="" class="position-absolute">
+// <button class="btn btn-primary position-absolute">
+//     BUY NOW
+// </button>
+// <img src="./Public/video-frame.png" alt="" class="img-fluid w-100">
+// </div>
+// </section>
+
+// play button at the center
+
+.video-container{
+    position: relative;
+    .play-btn{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s;
+        cursor: pointer;
+        @include respond(tab-port){
+            width: 40% !important;
+        }
+        &:hover{
+            // scale but keep in mind for the relative
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+    }
+    button{
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 34.9786px;
+        text-transform: uppercase;
+        color: #000000;
+        padding: 10px 40px;
+        border:none;
+        background: #2BF6FA;
+        @include respond(tab-port){
+            font-size: 2rem !important;
+        }
+        &:hover{
+            background: #000000;
+            color: #2BF6FA;
+        }
+    }
+}
+
+.animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-out;
+  }
+  
+  .animate.show {
+    opacity: 1;
+    transform: translateY(0px);
+  }

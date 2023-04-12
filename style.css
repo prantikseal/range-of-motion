@@ -31,25 +31,57 @@ $breakpoint arguement choices :
   box-sizing: border-box;
 }
 
+@media only screen and (max-width: 768px) {
+  .header .container {
+    text-align: center;
+  }
+}
+
 body {
   background-color: #000000 !important;
 }
 
-.hero-content .container .row .col-md-6 h1 {
+.hero-content h1 {
   font-family: "Peckham Press";
   font-style: normal;
   font-weight: 400;
-  font-size: 58px;
+  font-size: 3.625rem !important;
   letter-spacing: 0.02em;
 }
-.hero-content .container .row .col-md-6 p {
+@media only screen and (max-width: 900px) {
+  .hero-content h1 {
+    font-size: 3.5rem !important;
+  }
+}
+.hero-content p {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   color: #808080;
 }
+@media only screen and (max-width: 768px) {
+  .hero-content {
+    text-align: center;
+  }
+}
 
+.feature {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .feature .col-md-4 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .feature .col-md-4:nth-child(2) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
 .feature .feature-content {
   display: flex;
   flex-direction: column;
@@ -59,7 +91,6 @@ body {
   font-style: normal;
   font-weight: 900;
   font-size: 34.3009px;
-  line-height: 42px;
   letter-spacing: 0.02em;
   display: flex;
   align-items: center;
@@ -83,12 +114,17 @@ body {
   display: flex;
   margin-top: 6px;
 }
+@media only screen and (max-width: 900px) {
+  .feature {
+    text-align: center;
+  }
+}
 
 .buy-now-btn {
   padding: 10px;
   background: #2BF6FA;
   padding: 10px 20px;
-  border: none;
+  border: 1px solid #000000;
 }
 .buy-now-btn h4 {
   font-family: "Inter";
@@ -105,6 +141,16 @@ body {
   font-size: 10px;
   color: #000000;
 }
+.buy-now-btn:hover {
+  background: #000000;
+  border: 1px solid #2BF6FA;
+}
+.buy-now-btn:hover h4 {
+  color: #2BF6FA;
+}
+.buy-now-btn:hover div {
+  color: #2BF6FA;
+}
 
 .additional-content .additional-content-one {
   font-family: "Roboto";
@@ -119,4 +165,180 @@ body {
   font-weight: 900;
   font-size: 20px;
   color: #35FCFB;
+}
+
+.about-massage-gun h2 {
+  text-align: center;
+  font-family: "Peckham Press";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 6rem;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  opacity: 0.1;
+}
+@media only screen and (max-width: 900px) {
+  .about-massage-gun h2 {
+    font-size: 4rem !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .about-massage-gun h2 {
+    font-size: 3rem !important;
+  }
+}
+
+.massage-gun-diff-section-content h3 {
+  font-family: "Peckham Press";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40.2129px;
+  letter-spacing: 0.02em;
+}
+@media only screen and (max-width: 900px) {
+  .massage-gun-diff-section-content h3 {
+    font-size: 3rem !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .massage-gun-diff-section-content h3 {
+    text-align: center;
+  }
+}
+.massage-gun-diff-section-content ul {
+  list-style-type: none;
+}
+.massage-gun-diff-section-content ul li {
+  margin-bottom: 1.125rem;
+}
+.massage-gun-diff-section-content ul li span {
+  padding-left: 1.125rem;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #808080;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: inline;
+}
+.massage-gun-diff-section-content ul li span div {
+  font-size: 14px;
+  display: inline;
+  color: #808080;
+}
+
+.carousel-content .carousel-indicators li {
+  border: none;
+  background-color: #FFFFFF;
+}
+.carousel-content .carousel-indicators .active {
+  background-color: #2BF6FA;
+  border: none;
+  scale: none;
+}
+
+.whats-included .container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+@media only screen and (max-width: 900px) {
+  .whats-included .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+.whats-included h3 {
+  font-family: "Peckham Press";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40.2129px;
+  letter-spacing: 0.02em;
+}
+@media only screen and (max-width: 900px) {
+  .whats-included h3 {
+    font-size: 3rem !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .whats-included h3 {
+    text-align: center;
+  }
+}
+.whats-included ul {
+  padding-left: 1.5rem;
+}
+.whats-included ul li {
+  margin-bottom: 1.125rem;
+  padding-left: 1.125rem;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #808080;
+  margin-top: auto;
+}
+
+footer {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #AEAEAE;
+  text-align: center;
+}
+
+.video-container {
+  position: relative;
+}
+.video-container .play-btn {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+@media only screen and (max-width: 900px) {
+  .video-container .play-btn {
+    width: 40% !important;
+  }
+}
+.video-container .play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.video-container button {
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34.9786px;
+  text-transform: uppercase;
+  color: #000000;
+  padding: 10px 40px;
+  border: none;
+  background: #2BF6FA;
+}
+@media only screen and (max-width: 900px) {
+  .video-container button {
+    font-size: 2rem !important;
+  }
+}
+.video-container button:hover {
+  background: #000000;
+  color: #2BF6FA;
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-out;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0px);
 }/*# sourceMappingURL=style.css.map */
